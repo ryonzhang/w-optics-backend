@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "track_records",
+  "info": {
+    "name": "TrackRecord"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "prescription_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "addtional_note": {
+      "type": "richtext"
+    },
+    "vacancy": {
+      "via": "track_record",
+      "model": "vacancy"
+    }
+  }
+}

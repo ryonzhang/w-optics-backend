@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "name": "Profile"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "power": {
+      "type": "integer"
+    },
+    "diameter": {
+      "type": "integer"
+    },
+    "base_curvature": {
+      "type": "integer"
+    },
+    "addtional_note": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "doctors",
+  "info": {
+    "name": "Doctor"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "services": {
+      "collection": "service"
+    },
+    "branches": {
+      "collection": "branch",
+      "via": "doctors",
+      "dominant": true
+    }
+  }
+}

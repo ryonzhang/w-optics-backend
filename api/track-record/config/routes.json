@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/track-records",
+      "handler": "track-record.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/track-records/count",
+      "handler": "track-record.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/track-records/:id",
+      "handler": "track-record.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/track-records",
+      "handler": "track-record.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/track-records/:id",
+      "handler": "track-record.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/track-records/:id",
+      "handler": "track-record.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

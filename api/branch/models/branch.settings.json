@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "branches",
+  "info": {
+    "name": "Branch"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "unit": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string"
+    },
+    "street_line_1": {
+      "type": "string"
+    },
+    "street_line_2": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "integer"
+    },
+    "city": {
+      "type": "string"
+    },
+    "full_address": {
+      "type": "string"
+    },
+    "contact_number": {
+      "type": "string"
+    },
+    "contact_email": {
+      "type": "email"
+    },
+    "person_in_charge": {
+      "type": "string"
+    },
+    "additional_note": {
+      "type": "text"
+    },
+    "rooms": {
+      "collection": "room"
+    },
+    "doctors": {
+      "via": "branches",
+      "collection": "doctor"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vacancies",
+  "info": {
+    "name": "Vacancy"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "start_time": {
+      "type": "datetime"
+    },
+    "duration_in_mins": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "issued",
+        "pending",
+        "confirmed",
+        "rejected"
+      ],
+      "default": "issued"
+    },
+    "profile": {
+      "model": "profile"
+    },
+    "room": {
+      "model": "room"
+    },
+    "doctor": {
+      "model": "doctor"
+    },
+    "track_record": {
+      "model": "track-record",
+      "via": "vacancy"
+    }
+  }
+}
